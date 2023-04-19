@@ -149,8 +149,6 @@ class FireIncidenceETL():
 
     # insert to tables
     def upload_to_db(self):
-        #df.to_sql(tbl_name, db_file)
-        # transforming lists to data frames
         self.classification_groups_df.to_sql('classification_groups', self.db_file)
         self.classifications_df.to_sql('classifications', self.db_file)
         self.locations_df.to_sql('district_info', self.db_file)
@@ -158,11 +156,3 @@ class FireIncidenceETL():
         self.incidents_df.to_sql('fire_incidents', self.db_file)
 
 e = FireIncidenceETL()
-
-
-
-
-
-
-
-
